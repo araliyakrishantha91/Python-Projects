@@ -9,3 +9,13 @@ greeting = "Hello"
 name = input("Enter your name")
 
 print(greeting+ ' ' +name)
+
+age = 20
+print(age)
+print(type(age))
+
+print(type(greeting))
+
+age = "2 years"
+print(age)
+print(type(age))
