@@ -1,5 +1,9 @@
-answer = 5
-guess = int(input("Guess a number "))
+import random
+
+highest = 10
+answer = random.randint(1,highest)
+print(answer)
+guess = int(input("Guess a number between 1 and {}: ".format(highest)))
 
 # if guess != answer:
 #     if guess > answer:
