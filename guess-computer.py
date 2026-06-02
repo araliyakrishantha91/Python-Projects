@@ -4,7 +4,7 @@ guesses = 1
 print("Think a number between {} and {}".format(low , high))
 input("press Enter to start the game")
 
-while True:
+while low != high:
     guess = low + (high - low) // 2
     high_low = input("my guess is {}. Tell me should I guess higher(h), lower(l) or c if correct, o for exit: ".format(guess)).casefold()
 
@@ -23,3 +23,7 @@ while True:
     else:
         print("enter h,l or c")
     guesses += 1
+
+else:
+    print("I guessed number {}".format(low))
+    print("I guessed it by {} guesses".format(guesses))
