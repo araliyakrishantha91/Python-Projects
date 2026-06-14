@@ -21,5 +21,3 @@ while True:
     song_to_play = int(input("select a song: "))
     print("="*80)
     print("{} is playing".format(songs_list[song_to_play-1]))
-
-    break
