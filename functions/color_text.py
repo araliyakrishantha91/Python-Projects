@@ -13,14 +13,18 @@ BOLD = '\u001b[1m'
 UNDERLINE = '\u001b[4m'
 REVERSE = '\u001b[7m'
 
-def color_print(text: str, effect: str) -> None:
-    print("{0}{1}{2}".format(effect,text,RESET))
+def color_print(text: str, *effects: str) -> None:
+    effect_string = "".join(effects)
+    print("{0}{1}{2}".format(effect_string,text,RESET))
 
 
 color_print("Hello Blue",BLUE)
+color_print("Hello Blue in bold",BLUE, BOLD)
 color_print("Hello Red",RED)
+color_print("Hello Red with bold and underline",RED,BOLD,UNDERLINE)
 color_print("Hello Green",GREEN)
 color_print("Hello Yellow",YELLOW)
+color_print("Hello Yellow with underline",YELLOW, UNDERLINE)
 color_print("Hello Magenta",MAGENTA)
 color_print("Hello White",WHITE)
 print("This is the test text")
